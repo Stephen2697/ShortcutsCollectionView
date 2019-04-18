@@ -40,9 +40,10 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     //MARK : CollectionView Delegate Methods
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 30
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MainCollectionViewCell
         cell.editButton.addTarget(self, action: #selector(editCellButton), for: .touchUpInside)
         

@@ -14,9 +14,11 @@ class MainCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         setupCell()
     }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     // MARK: UI
     let iconImageView: UIImageView = {
         let imageView = UIImageView()
@@ -24,6 +26,8 @@ class MainCollectionViewCell: UICollectionViewCell {
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
+    
+    
     let listNameLabel: UILabel = {
         let label = UILabel()
         label.text = "List"
@@ -32,6 +36,8 @@ class MainCollectionViewCell: UICollectionViewCell {
         label.textAlignment = .left
         return label
     }()
+    
+    
     let editButton: UIButton = {
         let button = UIButton(type: .custom) as UIButton
         button.setImage(UIImage(named: "Edit"), for: UIControl.State.normal)
